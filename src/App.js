@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './App.css'
 
 const features = [
@@ -42,29 +43,23 @@ const features = [
 export default function App() {
   return (
     <>
-      {/* Ambient background blobs */}
       <div className="bg-blob bg-blob-1" />
       <div className="bg-blob bg-blob-2" />
       <div className="bg-blob bg-blob-3" />
 
       {/* Navbar */}
       <nav className="navbar">
-        <div className="nav-logo">Recycle Bin</div>
+        <Link to="/" className="nav-logo">silent hawk</Link>
         <ul className="nav-links">
-          <li>
-            <a href="#features">Features</a>
-          </li>
-          <li>
-            <a href="#pricing">Pricing</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#blog">Blog</a>
-          </li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
         </ul>
-        <button className="nav-cta">Get Started</button>
+        <div className="nav-auth-links">
+          <Link to="/login" className="nav-link-plain">Log in</Link>
+          <Link to="/register" className="nav-cta">Get Started</Link>
+        </div>
       </nav>
 
       {/* Hero */}
@@ -72,16 +67,18 @@ export default function App() {
         <div className="hero-content">
           <div className="hero-badge">Now in public beta</div>
           <h1>
-            Build products your
+            Share Your Products
             <br />
-            users <span>actually love</span>
+            Others <span>Will Benefit</span>
           </h1>
           <p>
             The all-in-one platform that turns your ideas into production-ready
             experiences — without the complexity.
           </p>
           <div className="hero-actions">
-            <button className="btn-primary">Start for free</button>
+            <Link to="/register" className="btn-primary" style={{ textDecoration: 'none' }}>
+              Start for free
+            </Link>
             <button className="btn-secondary">See how it works →</button>
           </div>
 
@@ -142,7 +139,9 @@ export default function App() {
               type="email"
               placeholder="Enter your email"
             />
-            <button className="btn-primary">Get early access</button>
+            <Link to="/register" className="btn-primary" style={{ textDecoration: 'none' }}>
+              Get early access
+            </Link>
           </div>
         </div>
       </section>

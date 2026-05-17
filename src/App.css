@@ -114,6 +114,23 @@ body {
   box-shadow: 0 6px 20px rgba(29, 111, 255, 0.45);
 }
 
+.nav-auth-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-link-plain {
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link-plain:hover {
+  color: #1d6fff;
+}
+
 /* ── Hero ── */
 .hero {
   position: relative;

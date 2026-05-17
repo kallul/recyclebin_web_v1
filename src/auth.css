@@ -1,0 +1,199 @@
+/* Auth pages share the same base variables as App.css */
+
+.auth-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* ── Auth-specific navbar overrides ── */
+.nav-auth-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-link-plain {
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link-plain:hover {
+  color: #1d6fff;
+}
+
+.nav-link-active {
+  color: #1d6fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ── Auth layout ── */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 48px 44px;
+}
+
+/* ── Auth card header ── */
+.auth-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.auth-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1d6fff;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.auth-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.auth-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ── Form ── */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  background: #fff;
+  color: #0f172a;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+.form-group input:focus {
+  border-color: #1d6fff;
+  box-shadow: 0 0 0 3px rgba(29, 111, 255, 0.1);
+}
+
+.forgot-link {
+  font-size: 0.82rem;
+  color: #1d6fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.terms-text {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-top: -4px;
+}
+.terms-text a {
+  color: #1d6fff;
+  text-decoration: none;
+}
+.terms-text a:hover {
+  text-decoration: underline;
+}
+
+.btn-auth {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: none;
+  background: #1d6fff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(29, 111, 255, 0.3);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  margin-top: 4px;
+}
+.btn-auth:hover {
+  background: #1558e0;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(29, 111, 255, 0.42);
+}
+.btn-auth:active {
+  transform: translateY(0);
+}
+
+/* ── Footer switch ── */
+.auth-switch {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+.auth-switch a {
+  color: #1d6fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 36px 24px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './App.css'
+import Chatbot from './Chatbot'
 
 const features = [
   {
@@ -150,6 +151,8 @@ export default function App() {
       <footer>
         <p>© 2026 Silent Hawk LDA. All rights reserved.</p>
       </footer>
+
+      <Chatbot />
     </>
   )
 }
